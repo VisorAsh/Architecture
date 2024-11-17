@@ -1,16 +1,33 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from 'react';
 
 const About = () => {
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!imageRef.current) return;
+      const scrolled = window.scrollY;
+      imageRef.current.style.transform = `translateY(${scrolled * 0.1}px)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="flex items-end my-52">
+    <div className="flex items-end my-52 overflow-hidden">
         <div className="w-1/2">
-            <Image
-                src={"/images/about.png"}
-                alt="Arrow"
-                width={852}
-                height={734}
-                className=""
-            />
+            <div ref={imageRef} className="transition-transform duration-300 ease-out">
+                <Image
+                    src={"/images/about.png"}
+                    alt="Arrow"
+                    width={852}
+                    height={734}
+                    className=""
+                />
+            </div>
         </div>
         <div className="w-1/2 mx-12 font-k2d pb-28 text-black space-y-8">
             <h2 className="font-semibold text-5xl">À propos</h2>

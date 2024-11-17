@@ -32,6 +32,7 @@ const Service = () => {
                 <div className="w-full h-full"></div>
                 <div className="w-full h-full"></div>
                 <div className="w-full h-full"></div>
+
             </div>
         </div>
     );
