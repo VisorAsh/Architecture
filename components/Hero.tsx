@@ -18,9 +18,14 @@ const Hero = () => {
         <h1 className="text-white text-3xl md:text-5xl font-k2d font-bold tracking-wide mb-4">
           CRÉATIVITÉ, FONCTIONNALITÉ, ET INNOVATION EN HARMONIE.
         </h1>
-        <a href="#" className="text-white text-sm md:text-lg font-k2d font-normal flex items-center cursor-pointer space-x-2  hover:space-x-4 transition-all duration-1000">
+        <a href="#" className="text-white text-sm md:text-lg font-k2d font-normal flex items-center cursor-pointer group space-x-2">
           <span>Découvrir nos projets</span>
-          <Image src={"/icons/arrow_white.svg"} alt="Arrow" width={30} height={30} className="text-white" />
+          <Image
+              src={"/icons/arrow_white.svg"}
+              alt="Arrow"
+              width={30} height={30}
+              className="transform transition-transform duration-300 group-hover:translate-x-1"
+          />
         </a>
       </div>
 

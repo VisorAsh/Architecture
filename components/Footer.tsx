@@ -15,7 +15,17 @@ const Footer = () => {
             <a href="#" className="hover:underline">Facebook</a>
         </div>
         <hr className="w-1/3" />
-        <p className="font-k2d font-medium">© Copyright 2024, All Rights Reserved. Design and Develop by <a href="https://hishaam-portfolio-2024.vercel.app/" className="underline uppercase hover:font-bold" target="_blank" rel="noopener noreferrer">Hishaam</a></p>
+        <p className="font-k2d font-medium">
+            © Copyright 2024, All Rights Reserved. Design and Develop by {" "}
+            <a
+                href="https://hishaam-portfolio-2024.vercel.app/"
+                className="underline uppercase hover:font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Hishaam
+            </a>
+        </p>
     </div>
   )
 }
